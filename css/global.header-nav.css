@@ -1,0 +1,181 @@
+.global__header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+  position: relative;
+  width: 100%;
+  @media (min-width: 990px) {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: var(--spacing-md) var(--spacing-xl);
+  }
+  .header__logo-descr {
+    display: block;
+    font-family: var(--primary-font-family);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--alt-text-color);
+    text-transform: uppercase;
+    text-decoration: none;
+    position: relative;
+    z-index: 101;
+    transition: transform var(--transition-speed) ease,
+      color var(--transition-speed) ease;
+
+    &:hover {
+      color: var(--accent-color);
+      transform: translateY(-2px);
+    }
+  }
+  .header__burger-menu {
+    display: block;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
+    margin-left: auto;
+
+    @media (min-width: 990px) {
+      display: none;
+    }
+    .burger__menu-line {
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--alt-text-color);
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      &:nth-child(1) {
+        transform: translateY(-8px);
+      }
+      &:nth-child(2) {
+        transform: translateY(0);
+      }
+      &:nth-child(3) {
+        transform: translateY(8px);
+      }
+    }
+    &.is-active {
+      .burger__menu-line {
+        &:nth-child(1) {
+          transform: translateY(0) rotate(45deg);
+        }
+
+        &:nth-child(2) {
+          opacity: 0;
+        }
+
+        &:nth-child(3) {
+          transform: translateY(0) rotate(-45deg);
+        }
+      }
+    }
+
+    &:hover .burger__menu-line {
+      background-color: var(--accent-color);
+    }
+  }
+  .header__nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: rgba(45, 45, 45, 0.98);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+    z-index: 100;
+    overflow: hidden;
+    &.is-open {
+      height: 100vh;
+    }
+    @media (min-width: 990px) {
+      position: static;
+      height: auto;
+      overflow: visible;
+      background: transparent;
+      backdrop-filter: none;
+      flex-direction: row;
+      justify-content: flex-end;
+      gap: var(--spacing-xl);
+    }
+    .header__menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--spacing-lg);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      @media (min-width: 990px) {
+        flex-direction: row;
+        gap: 1rem;
+      }
+      .header__menu-link {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: var(--alt-text-color);
+        font-size: 1.25rem;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: color var(--transition-speed) ease;
+        @media (min-width: 990px) {
+          font-size: 1rem;
+        }
+        &:hover {
+          color: var(--accent-color);
+        }
+      }
+    }
+  }
+  .header__social-media {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+    @media (min-width: 990px) {
+      margin: 0;
+    }
+    .social__media-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 6px;
+      transition: fill var(--transition-speed),
+        transform var(--transition-speed);
+      &:hover {
+        color: var(--accent-color);
+        transform: scale(1.1);
+      }
+    }
+    .social__media-img {
+      width: 24px;
+      height: 24px;
+      fill: var(--alt-text-color);
+      transition: fill var(--transition-speed),
+        transform var(--transition-speed);
+      &:hover {
+        fill: var(--description-text-color);
+        transform: scale(1.1);
+      }
+    }
+  }
+}

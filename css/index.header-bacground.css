@@ -1,0 +1,9 @@
+.index__header_background-container {
+  background-image: url(../img/header/index-header-backgroung.png);
+  width: 100%;
+  height: 100%;
+  background-position: 60% 40%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 60vh;
+}

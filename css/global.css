@@ -21,12 +21,20 @@ li {
   /* colors */
   --orange: #c17f2e;
   --white: #fff;
+  --gray: #2d2d2d;
+  --orange-hover: #ea9449;
+  --yellowish-olive: #7c782f;
+  --light-bluish: #bbbccc;
 
   scroll-behavior: smooth;
   --primary-font-family: "Rubik", sans-serif;
   --secondary-font-family: "Montserrat", sans-serif;
   --alt-text-color: var(--white);
+  --title-text-color: var(--gray);
   --background-color: var(--orange);
+  --scroll-up-color: var(--orange-hover);
+  --accent-color: var(--yellowish-olive);
+  --description-text-color: var(--light-bluish);
 
   /* Spacing */
   --spacing-xs: 0.5rem;

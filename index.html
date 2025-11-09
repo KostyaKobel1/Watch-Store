@@ -4,18 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Watch Store</title>
+    <link rel="shortcut icon" href="img/favicon-logo.png" type="image/x-icon" />
     <link rel="stylesheet" href="css/index.css" />
     <script src="https://unpkg.com/htmx.org@1.9.6"></script>
   </head>
   <body>
-    <header>
+    <header class="index__header_background-container">
       <div
         hx-trigger="load"
         hx-swap="outerHTML"
         hx-get="global.header-helping.partial.html"
       ></div>
+      <nav
+        hx-trigger="load"
+        hx-swap="outerHTML"
+        hx-get="global.header-nav.partial.html"
+      ></nav>
     </header>
     <main></main>
     <footer></footer>
+    <script src="js/index.js"></script>
   </body>
 </html>
