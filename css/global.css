@@ -25,11 +25,13 @@ li {
   --orange-hover: #ea9449;
   --yellowish-olive: #7c782f;
   --light-bluish: #bbbccc;
+  --light-gray: #f2f4f3;
 
   scroll-behavior: smooth;
   --primary-font-family: "Rubik", sans-serif;
   --secondary-font-family: "Montserrat", sans-serif;
   --alt-text-color: var(--white);
+  --alt-light-color: var(--light-gray);
   --title-text-color: var(--gray);
   --background-color: var(--orange);
   --scroll-up-color: var(--orange-hover);
@@ -67,8 +69,18 @@ body {
 }
 
 .container {
+  width: 100%;
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 0 var(--spacing-md);
+  
+  @media (min-width: 768px) {
+    padding: 0 var(--spacing-lg);
+  }
+  
+  @media (min-width: 1200px) {
+    padding: 0;
+  }
 }
 
 .link {
