@@ -22,10 +22,15 @@ li {
   --orange: #c17f2e;
   --white: #fff;
   --gray: #2d2d2d;
+  --special-black: #0e0e0e;
   --orange-hover: #ea9449;
   --yellowish-olive: #7c782f;
   --light-bluish: #bbbccc;
   --light-gray: #f2f4f3;
+  --darker-gray: #4e515b;
+  --more-darker-gray: #727272;
+  --light-black: #292929;
+  --darker-black: #4b4b4b;
 
   scroll-behavior: smooth;
   --primary-font-family: "Rubik", sans-serif;
@@ -37,6 +42,11 @@ li {
   --scroll-up-color: var(--orange-hover);
   --accent-color: var(--yellowish-olive);
   --description-text-color: var(--light-bluish);
+  --special-link-color: var(--special-black);
+  --special-descr-color: var(--darker-gray);
+  --more-darker-gray-color: var(--more-darker-gray);
+  --light-black-color: var(--light-black);
+  --darker-black-color: var(--darker-black);
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -44,6 +54,7 @@ li {
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
   --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
 
   /* Other */
   --header-height: 4rem;
@@ -73,11 +84,11 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-md);
-  
+
   @media (min-width: 768px) {
     padding: 0 var(--spacing-lg);
   }
-  
+
   @media (min-width: 1200px) {
     padding: 0;
   }
