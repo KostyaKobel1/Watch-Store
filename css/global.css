@@ -27,6 +27,7 @@ li {
   --yellowish-olive: #7c782f;
   --light-bluish: #bbbccc;
   --light-gray: #f2f4f3;
+  --lighter-gray: #f5f5f5;
   --darker-gray: #4e515b;
   --more-darker-gray: #727272;
   --light-black: #292929;
@@ -47,6 +48,7 @@ li {
   --more-darker-gray-color: var(--more-darker-gray);
   --light-black-color: var(--light-black);
   --darker-black-color: var(--darker-black);
+  --background-lighter-gray: var(--lighter-gray: );
 
   /* Spacing */
   --spacing-xs: 0.5rem;
