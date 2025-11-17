@@ -1,0 +1,101 @@
+.upgrade__your_style-watches {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: var(--spacing-xxl) var(--spacing-md);
+    gap: var(--spacing-xl);
+    @media (min-width: 768px) {
+      padding: var(--spacing-xxl) var(--spacing-xl);
+    }
+    .style__watches-content {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-md);
+      max-width: 600px;
+      @media (min-width: 990px) {
+        max-width: none;
+      }
+      .style__watches-link {
+        display: inline-block;
+        font-family: var(--secondary-font-family);
+        font-size: 0.625rem;
+        font-weight: 700;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--background-color);
+        transition: color var(--transition-speed) ease;
+        &:hover {
+          color: var(--scroll-up-color);
+        }
+      }
+      .style__watches-title {
+        font-family: var(--primary-font-family);
+        font-size: 36px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color: var(--alt-text-color);
+        margin: 0;
+        line-height: 1.2;
+        @media (min-width: 768px) {
+          font-size: 45px;
+        }
+        @media (min-width: 990px) {
+          font-size: 52px;
+        }
+      }
+      .style__watches-descr {
+        font-family: var(--primary-font-family);
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: var(--alt-text-color);
+        margin: 0;
+        @media (min-width: 768px) {
+          font-size: 20px;
+        }
+      }
+    }
+    .style__watches-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--spacing-md);
+      .style__watches-btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 130px;
+        padding: var(--spacing-sm) var(--spacing-md);
+        font-family: var(--secondary-font-family);
+        font-size: 0.875rem;
+        font-weight: 700;
+        color: var(--alt-text-color);
+        background: var(--background-color);
+        border: 2px solid var(--background-color);
+        border-radius: var(--border-radius);
+        text-decoration: none;
+        cursor: pointer;
+        transition: all var(--transition-speed) ease;
+        &:hover {
+          color: var(--light-black-color);
+        }
+      }
+      .style__watches-btn--primary {
+        &:hover {
+          border-color: var(--scroll-up-color);
+          color: var(--light-black-color);
+        }
+      }
+      .style__watches-btn--secondary {
+        background: transparent;
+        &:hover {
+          background: var(--background-color);
+          color: var(--alt-text-color);
+        }
+      }
+    }
+  }
+}
