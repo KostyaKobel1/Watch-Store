@@ -1,4 +1,5 @@
 .rare__timepieces {
+  background: var(--special-link-color);
   .wrapper {
     display: flex;
     flex-direction: column;
@@ -6,7 +7,6 @@
     text-align: center;
     padding: var(--spacing-xxl) var(--spacing-md);
     gap: var(--spacing-xl);
-    background: var(--special-link-color);
     @media (min-width: 768px) {
       padding: var(--spacing-xxl) var(--spacing-xl);
     }
@@ -93,6 +93,8 @@
         cursor: pointer;
         transition: all var(--transition-speed) ease;
         &:hover {
+          background-color: var(--alt-text-color);
+          border: var(--alt-text-color);
           color: var(--light-black-color);
         }
       }

@@ -80,19 +80,20 @@
         cursor: pointer;
         transition: all var(--transition-speed) ease;
         &:hover {
+          background-color: var(--alt-text-color);
+          border: var(--alt-text-color);
           color: var(--light-black-color);
         }
-      }
-      .style__watches-btn--primary {
-        &:hover {
-          border-color: var(--scroll-up-color);
-          color: var(--light-black-color);
+        .style__watches-btn--primary {
+          &:hover {
+            color: var(--light-black-color);
+          }
         }
       }
       .style__watches-btn--secondary {
         background: transparent;
         &:hover {
-          background: var(--background-color);
+          background-color: var(--background-color);
           color: var(--alt-text-color);
         }
       }
